@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
 
     def create
         message = Message.create(message_params)
-        render json: messages.to_json(:include => {
+        render json: message.to_json(:include => {
             :bike_trail => {:only => [:name, :distance, :counter_location]}
         }, :except => [:created_at, :updated_at])
     end
