@@ -11910,3 +11910,27 @@ Processing by BikeTrailsController#show as */*
 Completed 200 OK in 245ms (Views: 237.9ms | ActiveRecord: 6.1ms | Allocations: 233837)
 
 
+Started GET "/bike_trails/2" for ::1 at 2020-06-17 09:19:09 -0700
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BikeTrailsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBikeTrail Load (0.4ms)[0m  [1m[34mSELECT "bike_trails".* FROM "bike_trails" WHERE "bike_trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bike_trails_controller.rb:9:in `show'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "counters"."id" FROM "counters" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "counter_data"."id" FROM "counter_data" INNER JOIN "counters" ON "counter_data"."counter_id" = "counters"."id" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "locations"."id" FROM "locations" INNER JOIN "counters" ON "locations"."id" = "counters"."location_id" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[36mCounterDatum Load (3.6ms)[0m  [1m[34mSELECT "counter_data".* FROM "counter_data" INNER JOIN "counters" ON "counter_data"."counter_id" = "counters"."id" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[36mCounter Load (0.3ms)[0m  [1m[34mSELECT "counters".* FROM "counters" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "counter_data"."id" FROM "counter_data" WHERE "counter_data"."counter_id" = ?[0m  [["counter_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" INNER JOIN "counters" ON "locations"."id" = "counters"."location_id" WHERE "counters"."bike_trail_id" = ?[0m  [["bike_trail_id", 2]]
+  ↳ app/controllers/bike_trails_controller.rb:13:in `show'
+Completed 200 OK in 439ms (Views: 401.8ms | ActiveRecord: 13.2ms | Allocations: 266665)
+
+
