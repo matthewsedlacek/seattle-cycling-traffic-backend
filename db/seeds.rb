@@ -14,7 +14,7 @@ broadway = BikeTrail.create(name: "Broadway Bike Lane", distance: 1.5	, trail_ty
 #Locations
 burke_gilman_location = Location.create(longitude: 47.679359, latitude: -122.263684)
 elliot_bay_location = Location.create(longitude: 47.618844, latitude: -122.359963)
-ship_canal_location = Location.create(longitude: 45.5380, latitude: -122.6831)
+ship_canal_location = Location.create(longitude: 47.648119, latitude: -122.349855)
 mts_location = Location.create(longitude: 47.590748, latitude: -122.288702)
 wsb_location = Location.create(longitude: 47.571422, latitude: -122.349617)
 cs_location =  Location.create(longitude: 47.527844, latitude: -122.280171)
