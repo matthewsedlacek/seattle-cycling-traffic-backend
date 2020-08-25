@@ -57,8 +57,8 @@ message_19 = Message.create(user_name: Faker::Name.first_name, content: "This bi
 message_20 = Message.create(user_name: Faker::Name.first_name, content: "Almost hit a car today", bike_trail_id: 10)
 #CounterData
 # burke_gilman_counter
-# May 2020
-burke_gilman_url =  "https://data.seattle.gov/resource/2z5v-ecg8.json?$where=date between '2020-05-01T00:00:00' and '2020-05-31T23:59:59'"
+# July 2020
+burke_gilman_url =  "https://data.seattle.gov/resource/2z5v-ecg8.json?$where=date between '2020-07-01T00:00:00' and '2020-07-31T23:59:59'"
 burke_gilman_response = RestClient.get(burke_gilman_url)
 burke_gilman_response_body = burke_gilman_response.body
 burke_gilman_json_response = JSON.parse(burke_gilman_response_body)
@@ -70,9 +70,9 @@ burke_gilman_json_response.map do |trip|
   counter_id: burke_gilman_counter.id)
 end
 # elliot_bay_counter
-# May 2020
+# July 2020
 # https://data.seattle.gov/resource/4qej-qvrz.json
-elliot_bay_url =  "https://data.seattle.gov/resource/4qej-qvrz.json?$where=date between '2020-05-01T00:00:00' and '2020-05-31T23:59:59'"
+elliot_bay_url =  "https://data.seattle.gov/resource/4qej-qvrz.json?$where=date between '2020-07-01T00:00:00' and '2020-07-31T23:59:59'"
 elliot_bay_response = RestClient.get(elliot_bay_url)
 elliot_bay_response_body = elliot_bay_response.body
 elliot_bay_json_response = JSON.parse(elliot_bay_response_body)
@@ -84,9 +84,9 @@ elliot_bay_json_response.map do |trip|
   counter_id: elliot_bay_counter.id)
 end
 # ship_canal_counter
-# May 2020
+# July 2020
 # https://data.seattle.gov/resource/65db-xm6k.json
-ship_canal_url =  "https://data.seattle.gov/resource/65db-xm6k.json?$where=date between '2020-05-01T00:00:00' and '2020-05-31T23:59:59'"
+ship_canal_url =  "https://data.seattle.gov/resource/65db-xm6k.json?$where=date between '2020-07-01T00:00:00' and '2020-07-31T23:59:59'"
 ship_canal_response = RestClient.get(ship_canal_url)
 ship_canal_response_body = ship_canal_response.body
 ship_canal_json_response = JSON.parse(ship_canal_response_body)
@@ -98,9 +98,9 @@ ship_canal_json_response.map do |trip|
   counter_id: ship_canal_counter.id)
 end
 # mts_counter
-# April 2020
+# June 2020
 # https://data.seattle.gov/resource/u38e-ybnc.json
-mts_url =  "https://data.seattle.gov/resource/u38e-ybnc.json?$where=date between '2020-04-01T00:00:00' and '2020-04-30T23:59:59'"
+mts_url =  "https://data.seattle.gov/resource/u38e-ybnc.json?$where=date between '2020-06-01T00:00:00' and '2020-06-30T23:59:59'"
 mts_response = RestClient.get(mts_url)
 mts_response_body = mts_response.body
 mts_json_response = JSON.parse(mts_response_body)
@@ -112,8 +112,8 @@ mts_json_response.map do |trip|
   counter_id: mts_counter.id)
 end
 # wsb_counter
-# May 2020
-wsb_url =  "https://data.seattle.gov/resource/upms-nr8w.json?$where=date between '2020-05-01T00:00:00' and '2020-05-31T23:59:59'"
+# July 2020
+wsb_url =  "https://data.seattle.gov/resource/upms-nr8w.json?$where=date between '2020-07-01T00:00:00' and '2020-07-31T23:59:59'"
 wsb_response = RestClient.get(wsb_url)
 wsb_response_body = wsb_response.body
 wsb_json_response = JSON.parse(wsb_response_body)
@@ -139,9 +139,9 @@ cs_json_response.map do |trip|
   counter_id: cs_counter.id)
 end
 # second_ave_counter
-# April 2020
+# June 2020
 # https://data.seattle.gov/resource/avwm-i8ym.json
-second_ave_url =  "https://data.seattle.gov/resource/avwm-i8ym.json?$where=date between '2020-04-01T00:00:00' and '2020-04-30T23:59:59'"
+second_ave_url =  "https://data.seattle.gov/resource/avwm-i8ym.json?$where=date between '2020-06-01T00:00:00' and '2020-06-30T23:59:59'"
 second_ave_response = RestClient.get(second_ave_url)
 second_ave_response_body = second_ave_response.body
 second_ave_json_response = JSON.parse(second_ave_response_body)
@@ -153,9 +153,9 @@ second_ave_json_response.map do |trip|
   counter_id: second_ave_counter.id)
 end
 # golden_gardens_counter
-# April 2020
+# June 2020
 # https://data.seattle.gov/resource/47yq-6ugv.json
-golden_gardens_url =  "https://data.seattle.gov/resource/47yq-6ugv.json?$where=date between '2020-04-01T00:00:00' and '2020-04-30T23:59:59'"
+golden_gardens_url =  "https://data.seattle.gov/resource/47yq-6ugv.json?$where=date between '2020-06-01T00:00:00' and '2020-06-30T23:59:59'"
 golden_gardens_response = RestClient.get(golden_gardens_url)
 golden_gardens_response_body = golden_gardens_response.body
 golden_gardens_json_response = JSON.parse(golden_gardens_response_body)
@@ -181,9 +181,9 @@ bryant_greenway_json_response.map do |trip|
   counter_id: bryant_greenway_counter.id)
 end
 # broadway_counter
-# April 2020
+# June 2020
 # https://data.seattle.gov/resource/j4vh-b42a.json
-broadway_url =  "https://data.seattle.gov/resource/j4vh-b42a.json?$where=date between '2020-04-01T00:00:00' and '2020-04-30T23:59:59'"
+broadway_url =  "https://data.seattle.gov/resource/j4vh-b42a.json?$where=date between '2020-06-01T00:00:00' and '2020-06-30T23:59:59'"
 broadway_response = RestClient.get(broadway_url)
 broadway_response_body = broadway_response.body
 broadway_json_response = JSON.parse(broadway_response_body)
