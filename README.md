@@ -2,7 +2,7 @@
 
 An app that provides historical data and the ability to comment on Seattle's bike trails.
 The City of Seattle collects bike counter data at 10 locations. We wanted to utilize the Seattle bike-share data to show users how many cyclists are using these routes.
-This [link](https://github.com/johnrusch/seattle-cycling-traffic-frontend) will direct you to the frontend repository.
+This [link](https://github.com/matthewsedlacek/seattle-cycling-traffic-frontend) will direct you to the frontend repository.
 
 ## Motivation
 
@@ -13,7 +13,7 @@ The Seattle Cycling Trafic application was created to provide cyclists with a co
 1. Clone this repository
 2. Run `bundle install` in terminal
 3. Run the backend server - using rails server
-4. Open the frontend application - refer to [frontend](https://github.com/johnrusch/seattle-cycling-traffic-frontend) repository
+4. Open the frontend application - refer to [frontend](https://github.com/matthewsedlacek/seattle-cycling-traffic-frontend) repository
 5. Open the index.html in preferred browser
 6. Enjoy Seattle Bike Traffic
 
