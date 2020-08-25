@@ -14,8 +14,6 @@ The Seattle Cycling Trafic application was created to provide cyclists with a co
 2. Run `bundle install` in terminal
 3. Run the backend server - typing `rails s` in your terminal
 4. Open the frontend application - refer to [frontend](https://github.com/matthewsedlacek/seattle-cycling-traffic-frontend) repository
-5. Open the index.html in preferred browser
-6. Enjoy Seattle Bike Traffic
 
 ## Front-End Features
 
