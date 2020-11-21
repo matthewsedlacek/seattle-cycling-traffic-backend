@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_06_16_033324) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bike_trails", force: :cascade do |t|
     t.string "name"
     t.float "distance"
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_033324) do
     t.integer "total_trips"
     t.integer "direction_1"
     t.integer "direction_2"
-    t.integer "counter_id", null: false
+    t.bigint "counter_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["counter_id"], name: "index_counter_data_on_counter_id"
@@ -33,8 +36,8 @@ ActiveRecord::Schema.define(version: 2020_06_16_033324) do
 
   create_table "counters", force: :cascade do |t|
     t.string "name"
-    t.integer "location_id", null: false
-    t.integer "bike_trail_id", null: false
+    t.bigint "location_id", null: false
+    t.bigint "bike_trail_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bike_trail_id"], name: "index_counters_on_bike_trail_id"
@@ -51,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_033324) do
   create_table "messages", force: :cascade do |t|
     t.string "user_name"
     t.string "content"
-    t.integer "bike_trail_id", null: false
+    t.bigint "bike_trail_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bike_trail_id"], name: "index_messages_on_bike_trail_id"
